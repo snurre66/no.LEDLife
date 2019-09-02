@@ -2,7 +2,7 @@
 
 This app adds support for the EcoDim Z-wave and Zigbee devices sold by [EcoDim.nl](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html).  
 <a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
-  <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/assets/images/ecodim-small.png">
+  <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/assets/images/ecodim-large.png">
 </a>  
 
 ## Links:
