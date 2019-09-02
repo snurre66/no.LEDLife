@@ -2,7 +2,7 @@
 
 This app adds support for the EcoDim Z-wave and Zigbee devices sold by [EcoDim.nl](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html).  
 <a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
-  <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/assets/images/small.png">
+  <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/assets/images/ecodim-small.png">
 </a>  
 
 ## Links:
@@ -12,11 +12,12 @@ This app adds support for the EcoDim Z-wave and Zigbee devices sold by [EcoDim.n
 ## Supported devices
 
 ### ECO-DIM.07 Z-Wave / Zigbee Smart LED Dimmer
-* [Dimmer - 2 wire (Zigbee and Z-wave)](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html) (onoff, dim)
-
 <a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
-  <img src="https://rawgit.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-z-wave/assets/icon.svg" width="25%" height="25%">
+  <img src="https://rawgit.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-z-wave/assets/images/small.png" width="25%" height="25%">
+</a><a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
+  <img src="https://rawgit.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-zigbee/assets/images/small.png" width="25%" height="25%">
 </a>  
+
 The Smart Dimmer is a switch multi level device based on Z-wave Plus and Zigbee 3.0 protocol The Dimmer controller can be included and operated in certified Zigbee network and Z-Wave network.
 In addition, the LED dimmer has a wide range (0-200W LED), excellent dimmability and light stability (MIN and MAX adjustment) and all brands of cover material in NL & BE fit on the built-in element.
 Suitable for> 90% of all (normal) dimmable LED lamps.
