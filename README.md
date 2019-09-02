@@ -13,9 +13,9 @@ This app adds support for the EcoDim Z-wave and Zigbee devices sold by [EcoDim.n
 
 ### ECO-DIM.07 Z-Wave / Zigbee Smart LED Dimmer
 <a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
-  <img src="https://rawgit.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-z-wave/assets/images/small.png" width="25%" height="25%">
+  <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-z-wave/assets/images/large.png" width="25%" height="25%">
 </a><a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
-  <img src="https://rawgit.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-zigbee/assets/images/small.png" width="25%" height="25%">
+  <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/drivers/eco-dim07-zigbee/assets/images/large.png" width="25%" height="25%">
 </a>  
 
 The Smart Dimmer is a switch multi level device based on Z-wave Plus and Zigbee 3.0 protocol The Dimmer controller can be included and operated in certified Zigbee network and Z-Wave network.
