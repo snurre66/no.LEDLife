@@ -1,6 +1,6 @@
 # EcoDim Zigbee and Z-wave dimmer app
 
-This app adds support for the EcoDim Z-wave and Zigbee devices sold by [EcoDim.nl](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html).  
+This app adds support for the EcoDim Z-wave and Zigbee devices manufactured by [EcoDim.nl](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html).  
 <a href="https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html">
   <img src="https://raw.githubusercontent.com/EcoDimBV/nl.EcoDim/master/assets/images/ecodim-large.png">
 </a>  
@@ -19,8 +19,10 @@ This app adds support for the EcoDim Z-wave and Zigbee devices sold by [EcoDim.n
 </a>  
 
 The Smart Dimmer is a switch multi level device based on Z-wave Plus and Zigbee 3.0 protocol The Dimmer controller can be included and operated in certified Zigbee network and Z-Wave network.
+
 In addition, the LED dimmer has a wide range (0-200W LED), excellent dimmability and light stability (MIN and MAX adjustment) and all brands of cover material in NL & BE fit on the built-in element.
 Suitable for> 90% of all (normal) dimmable LED lamps.
+
 Of course also to be used if you do not yet have an app or home automation system. The dimmer is delivered incl. Clear Dutch manual. In short, a very complete and unique product and a world first!
 
 ## Supported Languages:
