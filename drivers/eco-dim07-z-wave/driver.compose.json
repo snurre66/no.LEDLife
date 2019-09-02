@@ -1,0 +1,63 @@
+{
+  "id": "eco-dim07-z-wave",
+  "name": {
+    "en": "ECO-DIM.07 (Z-wave)"
+  },
+  "class": "light",
+  "capabilities": [
+    "dim",
+    "onoff"
+  ],
+  "capabilitiesOptions": {
+		"onoff": {
+			"setOnDim": false
+		},
+		"dim": {
+			"opts": {
+				"duration": true
+			}
+		}
+	},
+  "energy": {
+   "usageOn": 200,
+   "usageOff": 1
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 1,
+    "productTypeId": [
+      258
+    ],
+    "productId": [
+      1
+    ],
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "There are two methods to set the dimmer into inclusion mode:\n1. When not linked to a network, repower the dimmer. The dimmer will be set into inclusion mode automatically and the LED will turn BLUE.\n2. Press and hold down the reset button for over 4 seconds. The LED will turn RED indicating the reset of the dimmer. Once the reset is finished, the inclusion mode is activated and the LED will turn BLUE.",
+        "nl": "De inclusion modus wordt geactiveerd op de volgende twee mmanieren:\n1. Wanneer de dimmer nog geen onderdeel uitmaakt van een netwerk, door het opnieuw inschakelen van de stroom. De dimmer activeert automatisch de inclusion mode en wacht om toegevoegd te worden. \n2. De RESET knop gedurende 4 seconden indrukken. De LED wordt ROOD en de dimmer wordt gereset. Wanneer de reset is afgerond, wordt de inclusion modus ingeschakeld en de LED BLAUW."
+      }
+    },
+    "unlearnmode": {
+      "image": "{{driverAssetsPath}}/unlearnmode.svg",
+      "instruction": {
+        "en": "To remove the dimmer, press and hold the RESET button for 4 seconds. \nThe dimmer will be set to exclusion mode and the dimmer will be excluded to the network.",
+        "nl": "Om de dimmer te verwijderen, druk gedurende 4 seconden de RESET knop in. \n De exclusion modus van de dimmer wordt geactiveerd en de dimmer wordt verwijdert uit het netwerk."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Lifeline association group (do not change). The Dimmer will send Switch Multilevel Report when Dimmer state changed (Configurable).",
+          "nl": "Lifeline association group (niet aanpassen). De Dimmer stuurt Switch Multilevel Reports wanneer de toestand van de Dimmer aangepast is (instelbaar)."
+        }
+      }
+    }
+  }
+}

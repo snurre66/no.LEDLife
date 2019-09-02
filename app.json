@@ -1,0 +1,249 @@
+{
+  "id": "nl.EcoDim",
+  "version": "1.0.0",
+  "compatibility": ">=2.0.0",
+  "sdk": 2,
+  "brandColor": "#3d3884",
+  "name": {
+    "en": "EcoDim Zigbee Z-wave"
+  },
+  "description": {
+    "en": "Adds support for EcoDim Zigbee Z-wave dimmers"
+  },
+  "category": [
+    "lights"
+  ],
+  "homeyCommunityTopicId": 17632,
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/ecodim-large.png",
+    "small": "/assets/images/ecodim-small.png"
+  },
+  "author": {
+    "name": "EcoDim.nl",
+    "email": "homey-app@ecodim.nl"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "eco-dim07-z-wave",
+      "name": {
+        "en": "ECO-DIM.07 (Z-wave)"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        },
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "usageOn": 200,
+        "usageOff": 1
+      },
+      "images": {
+        "large": "/drivers/eco-dim07-z-wave/assets/images/large.png",
+        "small": "/drivers/eco-dim07-z-wave/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 1,
+        "productTypeId": [
+          258
+        ],
+        "productId": [
+          1
+        ],
+        "learnmode": {
+          "image": "/drivers/eco-dim07-z-wave/assets/learnmode.svg",
+          "instruction": {
+            "en": "There are two methods to set the dimmer into inclusion mode:\n1. When not linked to a network, repower the dimmer. The dimmer will be set into inclusion mode automatically and the LED will turn BLUE.\n2. Press and hold down the reset button for over 4 seconds. The LED will turn RED indicating the reset of the dimmer. Once the reset is finished, the inclusion mode is activated and the LED will turn BLUE.",
+            "nl": "De inclusion modus wordt geactiveerd op de volgende twee mmanieren:\n1. Wanneer de dimmer nog geen onderdeel uitmaakt van een netwerk, door het opnieuw inschakelen van de stroom. De dimmer activeert automatisch de inclusion mode en wacht om toegevoegd te worden. \n2. De RESET knop gedurende 4 seconden indrukken. De LED wordt ROOD en de dimmer wordt gereset. Wanneer de reset is afgerond, wordt de inclusion modus ingeschakeld en de LED BLAUW."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/eco-dim07-z-wave/assets/unlearnmode.svg",
+          "instruction": {
+            "en": "To remove the dimmer, press and hold the RESET button for 4 seconds. \nThe dimmer will be set to exclusion mode and the dimmer will be excluded to the network.",
+            "nl": "Om de dimmer te verwijderen, druk gedurende 4 seconden de RESET knop in. \n De exclusion modus van de dimmer wordt geactiveerd en de dimmer wordt verwijdert uit het netwerk."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline association group (do not change). The Dimmer will send Switch Multilevel Report when Dimmer state changed (Configurable).",
+              "nl": "Lifeline association group (niet aanpassen). De Dimmer stuurt Switch Multilevel Reports wanneer de toestand van de Dimmer aangepast is (instelbaar)."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "save_state",
+          "value": "0",
+          "label": {
+            "en": "Restore state after power failure",
+            "nl": "Herstel status na stroomonderbreking"
+          },
+          "hint": {
+            "en": "This parameter (1) determines whether after a power failure the device should be restored to the state it had before the power failure.",
+            "nl": "Deze parameter (1) bepaalt of het apparaat na een stroomonderbreking moet worden ingesteld zoals deze voor de stroomonderbreking stond ingesteld."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Turn off light (default)",
+                "nl": "Schakel de lamp uit (standaard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Turn on light",
+                "nl": "Schakel de lamp in"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Restore state before power failure",
+                "nl": "Herstel toestand van voor stroomonderbreking"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "report_state",
+          "value": "1",
+          "label": {
+            "en": "Report state change",
+            "nl": "Rapporteer toestandswijziging"
+          },
+          "hint": {
+            "en": "This parameter (2) determines when the dimmer sends a report  when the status of Dimmer load is changed.",
+            "nl": "Deze parameter (2) bepaalt wanneer de dimmer een rapport stuurt wanneer de belasting van de dimmer is veranderd."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send Switch Multilevel Report for all state changes (default)",
+                "nl": "Stuur Switch Multilevel Report voor alle toestandswijzigingen (standaard)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Send Switch Multilevel Report only when state changed on device itself",
+                "nl": "Stuur Switch Multilevel Report enkel voor toestandswijzigingen vanuit de dimmer zelf"
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ]
+    },
+    {
+      "id": "eco-dim07-zigbee",
+      "name": {
+        "en": "ECO-DIM.07 (Zigbee)"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        },
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/eco-dim07-zigbee/assets/images/large.png",
+        "small": "/drivers/eco-dim07-zigbee/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Ember"
+        ],
+        "productId": [
+          "Dimmer-Switch-ZB3.0"
+        ],
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/eco-dim07-zigbee/assets/learnmode.svg",
+          "instruction": {
+            "en": "There are two methods to set the dimmer into inclusion mode:\n1. When not linked to a network, repower the dimmer. The dimmer will be set into inclusion mode automatically and the LED will turn BLUE.\n2. Press and hold down the reset button for over 4 seconds. The LED will turn RED indicating the reset of the dimmer. Once the reset is finished, the inclusion mode is activated and the LED will turn BLUE.",
+            "nl": "De inclusion modus wordt geactiveerd op de volgende twee mmanieren:\n1. Wanneer de dimmer nog geen onderdeel uitmaakt van een netwerk, door het opnieuw inschakelen van de stroom. De dimmer activeert automatisch de inclusion mode en wacht om toegevoegd te worden. \n2. De RESET knop gedurende 4 seconden indrukken. De LED wordt ROOD en de dimmer wordt gereset. Wanneer de reset is afgerond, wordt de inclusion modus ingeschakeld en de LED BLAUW."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/eco-dim07-zigbee/assets/unlearnmode.svg",
+          "instruction": {
+            "en": "To remove the dimmer, press and hold the RESET button for 4 seconds. \nThe dimmer will be set to exclusion mode and the dimmer will be excluded to the network.",
+            "nl": "Om de dimmer te verwijderen, druk gedurende 4 seconden de RESET knop in. \n De exclusion modus van de dimmer wordt geactiveerd en de dimmer wordt verwijdert uit het netwerk."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time",
+            "nl": "Overgangstijd"
+          },
+          "hint": {
+            "en": "This setting determines the default time in seconds it takes to dim from one level to another.",
+            "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    }
+  ]
+}
