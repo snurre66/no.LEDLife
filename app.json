@@ -31,6 +31,32 @@
       }
     ]
   },
+  "tags": {
+    "en": [
+      "EcoDim",
+      "Eco-Dim.07",
+      "Z-wave",
+      "Zigbee",
+      "dimmer",
+      "rotary",
+      "LED",
+      "2-wire",
+      "2 wire",
+       "Trailing Edge"
+    ],
+    "en": [
+      "EcoDim",
+      "Eco-Dim.07",
+      "Z-wave",
+      "Zigbee",
+      "dimmer",
+      "draai",
+      "LED",
+      "2-draads",
+      "2 draads",
+      "Fase afsnijding"
+    ]
+  },
   "drivers": [
     {
       "id": "eco-dim07-z-wave",
