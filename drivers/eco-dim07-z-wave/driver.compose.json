@@ -19,8 +19,10 @@
 		}
 	},
   "energy": {
-   "usageOn": 200,
-   "usageOff": 1
+    "approximation": {
+      "usageOn": 200,
+      "usageOff": 0
+    }
   },
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
