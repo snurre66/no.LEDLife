@@ -24,6 +24,9 @@ Of course also to be used if you do not yet have an app or home automation syste
 
 ## Changelog:
 
+### v1.0.1  
+* Fix power usage approximation issue Homey v3.0.0 Energy     
+
 ### v1.0.0
 * Initial app store release   
 * Add support for ECO-DIM.07 Z-Wave / Zigbee Smart LED Dimmer   

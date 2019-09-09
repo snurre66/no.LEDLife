@@ -1,6 +1,6 @@
 {
   "id": "nl.EcoDim",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=2.0.0",
   "sdk": 2,
   "brandColor": "#3d3884",
@@ -38,18 +38,6 @@
       "Z-wave",
       "Zigbee",
       "dimmer",
-      "rotary",
-      "LED",
-      "2-wire",
-      "2 wire",
-       "Trailing Edge"
-    ],
-    "en": [
-      "EcoDim",
-      "Eco-Dim.07",
-      "Z-wave",
-      "Zigbee",
-      "dimmer",
       "draai",
       "LED",
       "2-draads",
@@ -79,8 +67,10 @@
         }
       },
       "energy": {
-        "usageOn": 200,
-        "usageOff": 1
+        "approximation": {
+          "usageOn": 200,
+          "usageOff": 0
+        }
       },
       "images": {
         "large": "/drivers/eco-dim07-z-wave/assets/images/large.png",
@@ -221,6 +211,12 @@
           "opts": {
             "duration": true
           }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 200,
+          "usageOff": 0
         }
       },
       "images": {
