@@ -24,6 +24,10 @@ Of course also to be used if you do not yet have an app or home automation syste
 
 ## Changelog:
 
+### v1.0.2  
+* Updated app and drivers based on ECO-DIM.07 production firmware   
+* Update Homey-meshdriver to v1.3.7     
+
 ### v1.0.1  
 * Fix power usage approximation issue Homey v3.0.0 Energy     
 
