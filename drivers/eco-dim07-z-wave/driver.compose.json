@@ -20,7 +20,7 @@
 	},
   "energy": {
     "approximation": {
-      "usageOn": 200,
+      "usageOn": 0,
       "usageOff": 0
     }
   },
@@ -29,25 +29,27 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zwave": {
-    "manufacturerId": 1,
+    "manufacturerId": [1, 1073],
     "productTypeId": [
-      258
+      258,514
     ],
     "productId": [
       1
     ],
+    "includeSecure": false,
+    "__comment": "Reverted back to non secure inclusion due to S2 security handshake issues",
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "There are two methods to set the dimmer into inclusion mode:\n1. When not linked to a network, repower the dimmer. The dimmer will be set into inclusion mode automatically and the LED will turn BLUE.\n2. Press and hold down the reset button for over 4 seconds. The LED will turn RED indicating the reset of the dimmer. Once the reset is finished, the inclusion mode is activated and the LED will turn BLUE.",
-        "nl": "De inclusion modus wordt geactiveerd op de volgende twee mmanieren:\n1. Wanneer de dimmer nog geen onderdeel uitmaakt van een netwerk, door het opnieuw inschakelen van de stroom. De dimmer activeert automatisch de inclusion mode en wacht om toegevoegd te worden. \n2. De RESET knop gedurende 4 seconden indrukken. De LED wordt ROOD en de dimmer wordt gereset. Wanneer de reset is afgerond, wordt de inclusion modus ingeschakeld en de LED BLAUW."
+        "en": "To set the dimmer into inclusion mode:\n1. Press the RESET button twice. \nThe LED will start blinking RED indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
+        "nl": "Om de dimmer in toevoeg modus te zetten: \n1. Druk de RESET knop twee keer in. \nDe LED knippert ROOD en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
       }
     },
     "unlearnmode": {
       "image": "{{driverAssetsPath}}/unlearnmode.svg",
       "instruction": {
-        "en": "To remove the dimmer, press and hold the RESET button for 4 seconds. \nThe dimmer will be set to exclusion mode and the dimmer will be excluded to the network.",
-        "nl": "Om de dimmer te verwijderen, druk gedurende 4 seconden de RESET knop in. \n De exclusion modus van de dimmer wordt geactiveerd en de dimmer wordt verwijdert uit het netwerk."
+        "en": "To remover the press the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
+        "nl": "Om de dimmer te verwijderen, druk de RESET knop twee keer in. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
       }
     },
     "associationGroups": [
