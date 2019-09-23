@@ -232,7 +232,8 @@
       "zigbee": {
         "manufacturerName": [
           "Ember",
-          "EcoDim B.V"
+          "EcoDim B.V",
+          "abcd"
         ],
         "productId": [
           "Dimmer-Switch-ZB3.0"
