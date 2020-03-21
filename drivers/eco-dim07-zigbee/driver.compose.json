@@ -1,7 +1,7 @@
 {
   "id": "eco-dim07-zigbee",
   "name": {
-    "en": "ECO-DIM.07 Zigbee"
+    "en": "ECO-DIM.07 (2020) Zigbee"
   },
   "class": "light",
   "capabilities": [
