@@ -1,14 +1,15 @@
 {
   "id": "nl.EcoDim",
-  "version": "1.0.2",
-  "compatibility": ">=2.0.0",
+  "version": "1.1.0",
+  "compatibility": ">=4.0.0",
   "sdk": 2,
   "brandColor": "#3d3884",
   "name": {
     "en": "EcoDim"
   },
   "description": {
-    "en": "Adds support for EcoDim Zigbee Z-wave dimmers"
+    "en": "Affordable & reliable LED dimmers for everyone!",
+    "nl": "Betaalbare & kwalitatieve led dimmers voor iedereen!"
   },
   "category": [
     "lights"
@@ -49,7 +50,7 @@
     {
       "id": "eco-dim07-z-wave",
       "name": {
-        "en": "ECO-DIM.07 (Z-wave)"
+        "en": "ECO-DIM.07 (2019) Z-wave"
       },
       "class": "light",
       "capabilities": [
@@ -93,15 +94,15 @@
         "learnmode": {
           "image": "/drivers/eco-dim07-z-wave/assets/learnmode.svg",
           "instruction": {
-            "en": "To set the dimmer into inclusion mode:\n1. Press the RESET button twice. \nThe LED will start blinking RED indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
-            "nl": "Om de dimmer in toevoeg modus te zetten: \n1. Druk de RESET knop twee keer in. \nDe LED knippert ROOD en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+            "en": "Wait until the LED turns off, then continue to include the dimmer:\n1. Press the RESET button twice. \nThe LED will start blinking BLUE indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn BLUE for a few seconds and turn off",
+            "nl": "Wacht tot de LED uit is, voeg vervolgens de dimmer toe: \n1. Druk de RESET knop twee keer in. \nDe LED knippert BLAUW en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt BLAUW voor enkele seconden en gaat vervolgens uit."
           }
         },
         "unlearnmode": {
           "image": "/drivers/eco-dim07-z-wave/assets/unlearnmode.svg",
           "instruction": {
-            "en": "To remover the press the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
-            "nl": "Om de dimmer te verwijderen, druk de RESET knop twee keer in. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+            "en": "First remove the dimmer by pressing the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
+            "nl": "Reset eerst de dimmer door twee keer de RESET knop in te drukken. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
           }
         },
         "associationGroups": [
@@ -202,7 +203,7 @@
     {
       "id": "eco-dim07-zigbee",
       "name": {
-        "en": "ECO-DIM.07 (Zigbee)"
+        "en": "ECO-DIM.07 Zigbee"
       },
       "class": "light",
       "capabilities": [
@@ -272,6 +273,173 @@
             "min": 0,
             "max": 6553
           }
+        }
+      ]
+    },
+    {
+      "id": "eco-dim07.2-z-wave",
+      "name": {
+        "en": "ECO-DIM.07 (2020) Z-wave"
+      },
+      "class": "light",
+      "capabilities": [
+        "dim",
+        "onoff",
+        "measure_power"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        },
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "measure_power": {
+          "approximated": true
+        }
+      },
+      "images": {
+        "large": "/drivers/eco-dim07.2-z-wave/assets/images/large.png",
+        "small": "/drivers/eco-dim07.2-z-wave/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": [
+          1073
+        ],
+        "productTypeId": [
+          514
+        ],
+        "productId": [
+          2
+        ],
+        "includeSecure": false,
+        "__comment": "Reverted back to non secure inclusion due to S2 security handshake issues",
+        "learnmode": {
+          "image": "/drivers/eco-dim07.2-z-wave/assets/learnmode.svg",
+          "instruction": {
+            "en": "Wait until the LED turns off, then continue to include the dimmer:\n1. Press the RESET button twice. \nThe LED will start blinking BLUE indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn BLUE for a few seconds and turn off",
+            "nl": "Wacht tot de LED uit is, voeg vervolgens de dimmer toe: \n1. Druk de RESET knop twee keer in. \nDe LED knippert BLAUW en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt BLAUW voor enkele seconden en gaat vervolgens uit."
+          }
+        },
+        "unlearnmode": {
+          "image": "/drivers/eco-dim07.2-z-wave/assets/unlearnmode.svg",
+          "instruction": {
+            "en": "First remove the dimmer by pressing the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
+            "nl": "Reset eerst de dimmer door twee keer de RESET knop in te drukken. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Lifeline association group (do not change). The Dimmer will send Switch Multilevel Report when Dimmer state changed (Configurable).",
+              "nl": "Lifeline association group (niet aanpassen). De Dimmer stuurt Switch Multilevel Reports wanneer de toestand van de Dimmer aangepast is (instelbaar)."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Short press the knob turn on the dimmer Sends Basic Set(0xFF) to associated devices.",
+              "nl": "Korte druk op de knop om de dimmer in te schakelen stuurt Basic Set(0xFF) naar gekoppelde apparaten."
+            }
+          },
+          "3": {
+            "hint": {
+              "en": "“Clockwise the knob” Sends Switch Multilevel Set (to increase the brightness and keep associated devices in sync with this device) to associated devices",
+              "nl": "Draaien aan de knop stuurt Switch Multilevel Set naar de gekoppelde apparaten om helderheid in sync te houden met deze dimmer."
+            }
+          },
+          "4": {
+            "hint": {
+              "en": "External Button hold send Switch Multilevel Start Level Change (Switchover dimmer Up/Down). External Button release send Switch Multilevel Stop Level Change",
+              "nl": "Externe knop ingedrukt houden stuurt Switch Multilevel Start Level Change (Dimmer Up/Down). Externe knop loslaten stuurt Switch Multilevel Stop Level Change."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "save_state",
+          "value": "0",
+          "label": {
+            "en": "Restore state after power failure",
+            "nl": "Herstel status na stroomonderbreking"
+          },
+          "hint": {
+            "en": "This parameter (1) determines whether after a power failure the device should be restored to the state it had before the power failure.",
+            "nl": "Deze parameter (1) bepaalt of het apparaat na een stroomonderbreking moet worden ingesteld zoals deze voor de stroomonderbreking stond ingesteld."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Turn off light (default)",
+                "nl": "Schakel de lamp uit (standaard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Turn on light",
+                "nl": "Schakel de lamp in"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Restore state before power failure",
+                "nl": "Herstel toestand van voor stroomonderbreking"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "report_state",
+          "value": "1",
+          "label": {
+            "en": "Report state change",
+            "nl": "Rapporteer toestandswijziging"
+          },
+          "hint": {
+            "en": "This parameter (2) determines when the dimmer sends a report  when the status of Dimmer load is changed.",
+            "nl": "Deze parameter (2) bepaalt wanneer de dimmer een rapport stuurt wanneer de belasting van de dimmer is veranderd."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "nl": "Uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Send Switch Multilevel Report for all state changes (default)",
+                "nl": "Stuur Switch Multilevel Report voor alle toestandswijzigingen (standaard)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Send Switch Multilevel Report only when state changed on device itself",
+                "nl": "Stuur Switch Multilevel Report enkel voor toestandswijzigingen vanuit de dimmer zelf"
+              }
+            }
+          ],
+          "type": "dropdown"
         }
       ]
     }

@@ -1,0 +1,49 @@
+{
+  "id": "nl.EcoDim",
+  "version": "1.1.0",
+  "compatibility": ">=4.0.0",
+  "sdk": 2,
+  "brandColor": "#3d3884",
+  "name": {
+    "en": "EcoDim"
+  },
+  "description": {
+    "en": "Affordable & reliable LED dimmers for everyone!",
+    "nl": "Betaalbare & kwalitatieve led dimmers voor iedereen!"
+  },
+  "category": [
+    "lights"
+  ],
+  "homeyCommunityTopicId": 17632,
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/ecodim-large.png",
+    "small": "/assets/images/ecodim-small.png"
+  },
+  "author": {
+    "name": "EcoDim.nl",
+    "email": "homey-app@ecodim.nl"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ted Tolboom",
+        "email": "dTNL.Homey@gmail.com"
+      }
+    ]
+  },
+  "tags": {
+    "en": [
+      "EcoDim",
+      "Eco-Dim.07",
+      "Z-wave",
+      "Zigbee",
+      "dimmer",
+      "draai",
+      "LED",
+      "2-draads",
+      "2 draads",
+      "Fase afsnijding"
+    ]
+  }
+}
