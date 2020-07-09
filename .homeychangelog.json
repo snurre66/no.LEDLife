@@ -4,5 +4,8 @@
   },
   "1.1.1": {
     "en": "Add support for new ECO-DIM.07 Z-wave and Zigbee dimmers"
+  },
+  "2.0.0": {
+    "en": "Update to Homey v5.0.0 / SDK3"
   }
 }
