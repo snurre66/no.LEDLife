@@ -4,9 +4,9 @@ const Homey = require('homey');
 
 class EcoDimApp extends Homey.App {
 
-	onInit() {
-		this.log('EcoDim app is running...');
-	}
+  onInit() {
+    this.log('EcoDim app is running...');
+  }
 
 }
 
