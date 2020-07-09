@@ -24,6 +24,9 @@ Of course also to be used if you do not yet have an app or home automation syste
 
 ## Changelog:
 
+### v2.0.0  
+* Updated app and drivers based on SDK3 (Homey v5) and homey-zwavedriver & homey-zigbeedriver      
+
 ### v1.0.2  
 * Updated app and drivers based on ECO-DIM.07 production firmware   
 * Update Homey-meshdriver to v1.3.7     

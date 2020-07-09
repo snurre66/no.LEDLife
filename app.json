@@ -1,8 +1,8 @@
 {
   "id": "nl.EcoDim",
-  "version": "1.1.1",
-  "compatibility": ">=4.0.0",
-  "sdk": 2,
+  "version": "2.0.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
   "brandColor": "#3d3884",
   "name": {
     "en": "EcoDim"
@@ -239,8 +239,24 @@
         "productId": [
           "Dimmer-Switch-ZB3.0"
         ],
-        "deviceId": 257,
-        "profileId": 260,
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              2821,
+              4096
+            ],
+            "bindings": [
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "image": "/drivers/eco-dim07-zigbee/assets/learnmode.svg",
           "instruction": {
@@ -285,7 +301,8 @@
       "capabilities": [
         "dim",
         "onoff",
-        "measure_power"
+        "measure_power",
+        "meter_power"
       ],
       "capabilitiesOptions": {
         "onoff": {
@@ -440,6 +457,150 @@
             }
           ],
           "type": "dropdown"
+        },
+        {
+          "id": "dim_duration",
+          "type": "number",
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "label": {
+            "en": "Dim duration",
+            "nl": "Dim duur"
+          },
+          "units": {
+            "en": "s",
+            "nl": "s"
+          },
+          "value": 5,
+          "attr": {
+            "min": 1,
+            "max": 100,
+            "step": 1
+          },
+          "hint": {
+            "en": "This setting determines the time (in seconds) it takes to move between the maximum and minimum dim values when controlled via Homey.",
+            "nl": "Deze in bepaalt de tijd (in seconden) die nodig is voor het dimmen van het maximale naar het minimale dim niveau wanneer aangestuurd via Homey."
+          }
+        },
+        {
+          "id": "external_switch_inclusion",
+          "value": "0",
+          "label": {
+            "en": "Inclusion mode",
+            "nl": "Toevoegmodus"
+          },
+          "hint": {
+            "en": "This parameter (5) determines the option to use an external switch to include or exclude the device from the network.",
+            "nl": "Deze parameter (5) schakelt de optie in om een externe schakelaar te gebruiken om de dimmer toe te voegen of te verwijderen uit het netwerk."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Reset button only (default)",
+                "nl": "Enkel reset knop (standaard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "External knob + reset button",
+                "nl": "Externe knop + reset button"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "dim_curve",
+          "value": "0",
+          "label": {
+            "en": "Dim curve",
+            "nl": "Dim curve"
+          },
+          "hint": {
+            "en": "This parameter (6) determines the dimming behaviour (linear or logarithmic) of the dimmer.",
+            "nl": "Deze parameter (6) bepaalt het dim gedrag (lineair of logaritmisch) van de dimmer."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Linear dimming (default)",
+                "nl": "Lineair dimmen (standaard)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Logarithmic dimming",
+                "nl": "Logaritmisch dimmen"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "default_brightness",
+          "type": "number",
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "label": {
+            "en": "Brightness at turning on",
+            "nl": "Helderheid bij inschakelen"
+          },
+          "units": {
+            "en": "%",
+            "nl": "%"
+          },
+          "value": 0,
+          "attr": {
+            "min": 0,
+            "max": 99,
+            "step": 1
+          },
+          "hint": {
+            "en": "This parameter (7) determines the default brightness when turn on the dimmer from off status. Setting of 0 means that the dimmer will use parameter 1.",
+            "nl": "Deze parameter (7) bepaalt de helderheid na inschakelen van de dimmer vanuit uit toestand. De waarde 0 zorgt ervoor dat de dimmer parameter 1 gebruikt."
+          }
+        },
+        {
+          "id": "off_delay",
+          "type": "number",
+          "zwave": {
+            "index": 8,
+            "size": 1
+          },
+          "label": {
+            "en": "Turn off delay time",
+            "nl": "Uitschakel vertraging"
+          },
+          "units": {
+            "en": "s",
+            "nl": "s"
+          },
+          "value": 0,
+          "attr": {
+            "min": 1,
+            "max": 60,
+            "step": 1
+          },
+          "hint": {
+            "en": "This parameter (8) determines the delay time (in seconds) when turning off the dimmer.",
+            "nl": "Deze parameter (8) bepaalt de vertragingstijd (in seconden) na het uitschakelen van de dimmer."
+          }
         }
       ]
     }
