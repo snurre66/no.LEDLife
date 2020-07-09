@@ -1,40 +1,20 @@
 'use strict';
 
-const { ZigBeeDevice } = require('homey-meshdriver');
-const { ZigBeeLightDevice } = require('homey-meshdriver');
+const { ZigBeeLightDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
 
 class EcoDim07ZigbeeDevice extends ZigBeeLightDevice {
 
-  async onMeshInit() {
-    await super.onMeshInit();
+  async onNodeInit({ zclNode }) {
+    // Mark device as unavailable while configuring
+    this.setUnavailable(this.homey.__('pairing.configuring'));
+
+    await super.onNodeInit({ zclNode });
     // enable debugging
     // this.enableDebug();
 
     // print the node's info to the console
     // this.printNode();
-
-    this.log('GreenPowerProxy endpoint: ', this.getClusterEndpoint('genGreenPowerProxy'));
-
-    if (this.getClusterEndpoint('genGreenPowerProxy') !== 0) {
-      this.registerAttrReportListener('genOnOff', 'onOff', 1, 300, 1, value => {
-        this.log('Report onoff', value);
-
-        this.setCapabilityValue('onoff', value === 1);
-
-        // force request to update dim value if switched on
-        if (value === 1) this._getCapabilityValue('dim', 'genLevelCtrl');
-
-        if (this.hasCapability('dim') && value === 0) this.setCapabilityValue('dim', value);
-      }, 0);
-
-      this.registerAttrReportListener('genLevelCtrl', 'currentLevel', 3, 300, 3, value => {
-        this.log('Report dim', value);
-        // only update dim level if onoff state is true
-        if (this.getCapabilityValue('onoff') === true) {
-          this.setCapabilityValue('dim', value / 254);
-        }
-      }, 0);
-    }
 
     this.setAvailable();
     this.log('EcoDim.07 Zigbee device has been inited');

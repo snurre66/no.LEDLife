@@ -31,8 +31,24 @@
   "zigbee": {
     "manufacturerName": ["Ember", "EcoDim B.V", "abcd"],
     "productId": ["Dimmer-Switch-ZB3.0"],
-    "deviceId": 257,
-    "profileId": 260,
+    "endpoints": {
+      "1": {
+       "clusters": [
+         0,
+         3,
+         4,
+         5,
+         6,
+         8,
+         2821,
+         4096
+       ],
+       "bindings": [
+         6,
+         8
+       ]
+     }
+   },
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
