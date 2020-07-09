@@ -1,11 +1,14 @@
 'use strict';
 
-const { ZwaveDevice } = require('homey-meshdriver');
-const util = require('../../node_modules/homey-meshdriver/lib/util');
+const { ZwaveDevice } = require('homey-zwavedriver');
+const util = require('../../node_modules/homey-zwavedriver/lib/util');
 
 class EcoDim07ZwaveDevice extends ZwaveDevice {
 
-  async onMeshInit() {
+  async onNodeInit({ node }) {
+    // Mark device as unavailable while configuring
+    this.setUnavailable(this.homey.__('pairing.configuring'));
+
     // enable debugging
     // this.enableDebug();
 
@@ -14,7 +17,7 @@ class EcoDim07ZwaveDevice extends ZwaveDevice {
 
     this.registerCapability('onoff', 'SWITCH_MULTILEVEL', {
       setParserV2(value, options) {
-        const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : 'Factory default');
+        const duration = (options.hasOwnProperty('duration') ? util.calculateDimDuration(options.duration) : 'Factory default');
         // << containment for not reporting state after Z-wave command
         if (this.hasCapability('dim')) {
           this.setCapabilityValue('dim', (value) ? (this.getStoreValue('previous_dim_level') || null) : 0);
@@ -29,7 +32,7 @@ class EcoDim07ZwaveDevice extends ZwaveDevice {
 
     this.registerCapability('dim', 'SWITCH_MULTILEVEL', {
       setParserV2(value, options) {
-        const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : 'Factory default');
+        const duration = (options.hasOwnProperty('duration') ? util.calculateDimDuration(options.duration) : 'Factory default');
         if (this.hasCapability('onoff')) this.setCapabilityValue('onoff', value > 0);
 
         // << containment for not reporting state after Z-wave command
