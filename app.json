@@ -1,6 +1,6 @@
 {
   "id": "nl.EcoDim",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#3d3884",
@@ -250,10 +250,6 @@
               8,
               2821,
               4096
-            ],
-            "bindings": [
-              6,
-              8
             ]
           }
         },

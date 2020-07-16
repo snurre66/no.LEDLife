@@ -4,7 +4,7 @@
 	"description": "This app adds support for the [EcoDim dimmers](https://www.ecodim.nl/eco-dim07-zigbee-z-wave-smart-led-dimmer.html) sold by [EcoDim.nl](https://www.EcoDim.nl).",
 	"main": "app.js",
 	"dependencies": {
-		"homey-zigbeedriver": "^1.1.0",
+		"homey-zigbeedriver": "^1.3.0",
 		"homey-zwavedriver": "^1.0.3",
 		"zigbee-clusters": "^1.1.2"
 	},
