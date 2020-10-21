@@ -1,7 +1,7 @@
 {
   "id": "eco-dim07.2-z-wave",
   "name": {
-    "en": "ECO-DIM.07 (2020) Z-wave"
+    "en": "ECO-DIM.07 & ECO-DIM.10 (2020) Z-wave"
   },
   "class": "light",
   "capabilities": [
@@ -40,15 +40,15 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "Wait until the LED turns off, then continue to include the dimmer:\n1. Press the RESET button twice. \nThe LED will start blinking BLUE indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn BLUE for a few seconds and turn off",
-        "nl": "Wacht tot de LED uit is, voeg vervolgens de dimmer toe: \n1. Druk de RESET knop twee keer in. \nDe LED knippert BLAUW en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt BLAUW voor enkele seconden en gaat vervolgens uit."
+        "en": "Wait until the LED turns off, then continue to include the dimmer:\n1. Press the RESET button twice. \nThe LED will start blinking indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Wacht tot de LED uit is, voeg vervolgens de dimmer toe: \n1. Druk de RESET knop twee keer in. \nDe LED knippert en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
       }
     },
     "unlearnmode": {
       "image": "{{driverAssetsPath}}/unlearnmode.svg",
       "instruction": {
-        "en": "First remove the dimmer by pressing the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
-        "nl": "Reset eerst de dimmer door twee keer de RESET knop in te drukken. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+        "en": "First remove the dimmer by pressing the RESET button twice. \nThe LED will start blinking indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Reset eerst de dimmer door twee keer de RESET knop in te drukken. \nDe LED knippert en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
       }
     },
     "associationGroups": [

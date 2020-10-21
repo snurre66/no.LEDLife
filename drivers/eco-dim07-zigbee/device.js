@@ -3,7 +3,7 @@
 const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 
-class EcoDim07ZigbeeDevice extends ZigBeeLightDevice {
+class EcoDimZigbeeDevice extends ZigBeeLightDevice {
 
   async onNodeInit({ zclNode }) {
     // Mark device as unavailable while configuring
@@ -11,10 +11,13 @@ class EcoDim07ZigbeeDevice extends ZigBeeLightDevice {
 
     await super.onNodeInit({ zclNode });
     // enable debugging
-    // this.enableDebug();
+    this.enableDebug();
 
     // print the node's info to the console
     // this.printNode();
+
+    await zclNode.endpoints[1].clusters[CLUSTER.ON_OFF.NAME].discoverAttributes();
+    await zclNode.endpoints[1].clusters[CLUSTER.LEVEL_CONTROL.NAME].discoverAttributes();
 
     this.setAvailable();
     this.log('EcoDim.07 Zigbee device has been inited');
@@ -22,7 +25,7 @@ class EcoDim07ZigbeeDevice extends ZigBeeLightDevice {
 
 }
 
-module.exports = EcoDim07ZigbeeDevice;
+module.exports = EcoDimZigbeeDevice;
 /*
 2019-09-01 12:34:17 [log] [ManagerDrivers] [eco-dim07-zigbee] [0] ------------------------------------------
 2019-09-01 12:34:17 [log] [ManagerDrivers] [eco-dim07-zigbee] [0] Node: 144c4b6a-c483-4bcc-8d2f-df17eaf82053

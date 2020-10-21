@@ -1,7 +1,7 @@
 {
   "id": "eco-dim07-zigbee",
   "name": {
-    "en": "ECO-DIM.07 (2020) Zigbee"
+    "en": "ECO-DIM.07 & ECO-DIM.10 (2020) Zigbee"
   },
   "class": "light",
   "capabilities": [
@@ -29,7 +29,7 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
-    "manufacturerName": ["Ember", "EcoDim B.V", "abcd"],
+    "manufacturerName": ["Ember", "EcoDim B.V", "EcoDim BV", "abcd"],
     "productId": ["Dimmer-Switch-ZB3.0"],
     "endpoints": {
       "1": {
@@ -52,15 +52,15 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/learnmode.svg",
       "instruction": {
-        "en": "To set the dimmer into inclusion mode:\n1. Press the RESET button twice. \nThe LED will start blinking RED indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
-        "nl": "Om de dimmer in toevoeg modus te zetten: \n1. Druk de RESET knop twee keer in. \nDe LED knippert ROOD en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+        "en": "To set the dimmer into inclusion mode:\n1. Press the RESET button twice. \nThe LED will start blinking indicating that the inclusion mode is activated.\n Once inclusion is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Om de dimmer in toevoeg modus te zetten: \n1. Druk de RESET knop twee keer in. \nDe LED knippert en de inclusion modus is ingeschakeld. \nWanneer het toevoegen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
       }
     },
     "unlearnmode": {
       "image": "{{driverAssetsPath}}/unlearnmode.svg",
       "instruction": {
-        "en": "To remover the press the RESET button twice. \nThe LED will start blinking RED indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn RED for a few seconds and turn off",
-        "nl": "Om de dimmer te verwijderen, druk de RESET knop twee keer in. \nDe LED knippert ROOD en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, wordt ROOD voor enkele seconden en gaat vervolgens uit."
+        "en": "To remover the press the RESET button twice. \nThe LED will start blinking indicating that the exclusion mode is activated.\n Once removal is succesfull, the LED stop blinking, turn on for a few seconds and turn off",
+        "nl": "Om de dimmer te verwijderen, druk de RESET knop twee keer in. \nDe LED knippert en de exclusion modus is ingeschakeld. \nWanneer het verwijderen succesvol is afgerond, stopt de LED met knipperen, staat aan voor enkele seconden en gaat vervolgens uit."
       }
     }
   }
