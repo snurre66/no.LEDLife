@@ -1,6 +1,6 @@
 {
   "id": "nl.EcoDim",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#3d3884",
@@ -43,7 +43,10 @@
       "LED",
       "2-draads",
       "2 draads",
-      "Fase afsnijding"
+      "Fase afsnijding",
+      "filament",
+      "lamp",
+      "bulb"
     ]
   }
 }
