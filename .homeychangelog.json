@@ -13,5 +13,8 @@
   },
   "2.0.2": {
     "en": "Update to SDK3 / Homey v5.0.0"
+  },
+  "2.1.0": {
+    "en": "Add support for ECO-DIM.10 and Smart Filament bulbs"
   }
 }
