@@ -31,7 +31,7 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
-    "manufacturerName": ["ZigBee/CCT", "EcoDim B.V", "EcoDim BV"],
+    "manufacturerName": ["ZigBee/CCT", "EcoDim", "EcoDim B.V.","EcoDim B.V", "EcoDim BV"],
     "productId": ["CCT Light"],
     "endpoints": {
       "1": {
