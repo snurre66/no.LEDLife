@@ -35,7 +35,7 @@
 	},
 	"zigbee": {
     "manufacturerName": ["EcoDim", "EcoDim B.V", "EcoDim B.V.", "EcoDim BV"],
-    "productId": ["ED-10010"],
+    "productId": ["ED-10010", "ED-10011"],
 		"endpoints": {
       "1": {
        "clusters": [
