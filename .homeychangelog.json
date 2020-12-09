@@ -19,5 +19,8 @@
   },
   "2.2.0": {
     "en": "Add support ED-10010, ED-10012 and ED10014 wall controllers"
+  },
+  "2.2.1": {
+    "en": "Add support ED-10010/11, ED-10012/13 and ED10014/15 wall controllers"
   }
 }
