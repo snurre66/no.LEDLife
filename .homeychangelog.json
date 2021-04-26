@@ -25,5 +25,8 @@
   },
   "2.2.2": {
     "en": "Add support ED-10010/11, ED-10012/13 and ED10014/15 wall controllers"
+  },
+  "2.2.3": {
+    "en": "Minor change to the EcoDim dim07 zigbee driver"
   }
 }
