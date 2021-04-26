@@ -7,7 +7,7 @@ class EcoDim07ZwaveDevice extends ZwaveDevice {
 
   async onNodeInit({ node }) {
     // Mark device as unavailable while configuring
-    this.setUnavailable(this.homey.__('pairing.configuring'));
+    await this.setUnavailable(this.homey.__('pairing.configuring'));
 
     // enable debugging
     // this.enableDebug();
@@ -57,7 +57,7 @@ class EcoDim07ZwaveDevice extends ZwaveDevice {
         return null;
       },
     });
-    this.setAvailable();
+    await this.setAvailable();
     this.log('EcoDim.07 Z-wave device has been inited');
   }
 

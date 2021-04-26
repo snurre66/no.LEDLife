@@ -6,7 +6,7 @@ module.exports = class WallControllerED10012 extends WallControllerDevice {
 
   async onNodeInit({ zclNode }) {
     // Mark device as unavailable while configuring
-    this.setUnavailable(this.homey.__('pairing.configuring'));
+    await this.setUnavailable(this.homey.__('pairing.configuring'));
 
     // enable debugging
     // this.enableDebug();
@@ -33,7 +33,7 @@ module.exports = class WallControllerED10012 extends WallControllerDevice {
     await super.onNodeInit({ zclNode });
 
     // Finally device is ready to be used, mark as available
-    this.setAvailable();
+    await this.setAvailable();
   }
 
 };
