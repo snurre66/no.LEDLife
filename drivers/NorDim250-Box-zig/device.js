@@ -11,13 +11,13 @@ class EcoDimZigbeeDevice extends ZigBeeLightDevice {
 
     await super.onNodeInit({ zclNode });
     // enable debugging
-    // this.enableDebug();
+    this.enableDebug();
 
     // print the node's info to the console
-    // this.printNode();
+    this.printNode();
 
     await this.setAvailable();
-    this.log('EcoDim.07 Zigbee device has been inited');
+    this.log('LEDLife Zigbee device has been inited');
   }
 
 }

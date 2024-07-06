@@ -1,11 +1,3 @@
 [
-	{
-		"id": "zwave"
-	},
-	{
-		"id": "zigbee"
-	},
-	{
-		"id": "compose"
-  }
+
 ]

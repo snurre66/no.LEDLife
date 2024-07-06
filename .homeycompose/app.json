@@ -1,11 +1,11 @@
 {
-  "id": "nl.EcoDim",
-  "version": "2.2.3",
+  "id": "no.LEDLife",
+  "version": "1.2.0",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#3d3884",
   "name": {
-    "en": "EcoDim"
+    "en": "LEDLife"
   },
   "description": {
     "en": "Affordable & reliable LED dimmers for everyone!",
@@ -17,36 +17,28 @@
   "homeyCommunityTopicId": 17632,
   "permissions": [],
   "images": {
-    "large": "/assets/images/ecodim-large.png",
-    "small": "/assets/images/ecodim-small.png"
+    "large": "/assets/images/ledlife-large.png",
+    "small": "/assets/images/ledlife-small.png"
   },
   "author": {
-    "name": "EcoDim.nl",
+    "name": "LEDLife.no",
     "email": "homey-app@ecodim.nl"
   },
   "contributors": {
     "developers": [
       {
-        "name": "Ted Tolboom",
-        "email": "dTNL.Homey@gmail.com"
+        "name": "Thomas Veivåg",
+        "email": "nobody@gmail.com"
       }
     ]
   },
   "tags": {
     "en": [
-      "EcoDim",
-      "Eco-Dim.07",
-      "Z-wave",
+      "ledlife",
+      "LEDLife",
       "Zigbee",
       "dimmer",
-      "draai",
-      "LED",
-      "2-draads",
-      "2 draads",
-      "Fase afsnijding",
-      "filament",
-      "lamp",
-      "bulb"
+      "LED"
     ]
   }
 }
